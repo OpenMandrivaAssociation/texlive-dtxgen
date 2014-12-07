@@ -6,7 +6,7 @@
 # catalog-version 1.04
 Name:		texlive-dtxgen
 Version:	1.04
-Release:	2
+Release:	3
 Summary:	Creates a template for a self-extracting .dtx file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/dtxgen
