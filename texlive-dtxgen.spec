@@ -1,18 +1,12 @@
-# revision 33681
-# category Package
-# catalog-ctan /support/dtxgen
-# catalog-date 2014-04-25 13:42:50 +0200
-# catalog-license gpl
-# catalog-version 1.04
 Name:		texlive-dtxgen
-Version:	1.07
-Release:	2
+Version:	51663
+Release:	1
 Summary:	Creates a template for a self-extracting .dtx file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/dtxgen
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dtxgen.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dtxgen.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dtxgen.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dtxgen.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ The bash script dtxgen creates a template for a self-extracting
 Documented LaTeX Source (.dtx) file.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -41,14 +35,14 @@ Documented LaTeX Source (.dtx) file.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/dtxgen/dtxgen dtxgen
+ln -sf %{_texmfdistdir}/scripts/dtxgen/dtxgen dtxgen
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
