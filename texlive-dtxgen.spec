@@ -1,6 +1,6 @@
 Name:		texlive-dtxgen
 Version:	51663
-Release:	1
+Release:	2
 Summary:	Creates a template for a self-extracting .dtx file
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/dtxgen
