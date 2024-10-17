@@ -3,7 +3,7 @@ Version:	51663
 Release:	2
 Summary:	Creates a template for a self-extracting .dtx file
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/dtxgen
+URL:		https://www.ctan.org/tex-archive/support/dtxgen
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dtxgen.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dtxgen.doc.r%{version}.tar.xz
